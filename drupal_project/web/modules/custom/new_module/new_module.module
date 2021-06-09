@@ -1,0 +1,23 @@
+<?php
+use Drupal\image\Entity\ImageStyle;
+function new_module_preprocess_node(&$variables) {
+	 // if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
+	 if ($variables['node']->getType() == 'article') {
+		// $variables['mytitle'] = $node->field_tags->value;
+ 		$variables['mytitle'] = $variables['node']->getTitle();
+ 		// $banneruri = $node->field_banner->entity->getFileUri();
+   //  	$style = \Drupal::entityTypeManager()
+  	// 	->getStorage('image_style')
+  	// 	->load('test');
+   //  	$styleuri = $style->buildUri($banneruri);
+   //  	if (!file_exists($styleuri)) {
+  	// 	$style->createDerivative($banneruri, $styleuri);
+// }
+//     $variables['mybanner'] = file_url_transform_relative($style->buildUrl($banneruri));
+
+    	// $variables['test2'] =$variables['node']->get('body')->value;
+   //  	ddl($variables['mytitle']);
+	}
+}
+
+

@@ -1,0 +1,57 @@
+
+/*Variables*/
+
+$fontFamily: 'Roboto', sans-serif;
+$titleFontFamily: 'Ultra', serif;
+$baseFontSize: 14px;
+$bodyBGColor: #fff;
+$baseFontColor: #000;
+
+$linkColor: #ff6260;
+$linkColorHover: #d65339;
+
+/*Header*/
+
+$headerBGColor: #000;
+$headerTextColor: #fff;
+
+/*Menu Color*/
+
+$menuTextColor: #fff;
+$menuTextActiveColor: $linkColor;
+
+$mobileMenuBg: #212020;
+
+$desktopMenuTextColor: #fff;
+$desktopMenuDropDownBg: rgba(255, 255, 255, 0.74);
+
+$servicesBg: $linkColor;
+$servicesTextColor: #fff;
+
+
+/*Mixins*/
+
+@mixin globalButton(){
+	background: $linkColor;
+	color: #fff;
+	border: 0;
+	padding: 10px 15px;
+	line-height: 100%;
+	border-radius: 0;
+}
+
+@mixin globalButtonHover(){
+	background: $linkColorHover;
+	color: #fff;
+}
+
+@mixin blockStyle(){
+	background: #fff;
+	@include box-shadow(
+		0 1px 1px rgba(0,0,0,0.15),
+		0 10px 0 -5px #eee, 
+		0 10px 1px -4px rgba(0,0,0,0.15),
+		0 20px 0 -10px #eee, 
+		0 20px 1px -9px rgba(0,0,0,0.15)
+	);
+}

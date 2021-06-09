@@ -1,0 +1,40 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function drupal_form_schema() {
+    $schema['drupal_form'] = array (
+      'fields' => array(
+        'id'=>array(
+          'type'=>'serial',
+          'not null' => TRUE,
+        ),
+          'name'=>array(
+          'type' => 'varchar',
+          'length' => 40,
+          'not null' => TRUE,
+        ),
+          'phone_no'=>array(
+          'type' => 'varchar',
+          'length' => 40,
+          'not null' => TRUE,
+        ),
+        'email'=>array(
+          'type' => 'varchar',
+          'length' => 40,
+          'not null' => TRUE,
+          ),
+      ),
+      'primary key' => array('id'),
+    );
+    return $schema;
+}
+function drupal_form_update_9001(){
+  $spec = [
+      'description' => 'password',
+      'type' => 'varchar',
+      'length' => '20'
+    ];
+    $schema = Database::getConnection()->schema();
+    $schema->addfield('drupal_form','password',$spec); 
+}

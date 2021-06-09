@@ -1,0 +1,17 @@
+custom_module.welcome:
+  path: '/welcome/page'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\WelcomeController::welcome'
+    _title: 'Welcome to My Module in Drupal 8'
+  requirements: 
+    _permission: 'access content'
+    
+custom_module.welcome:
+  path: '/anjali'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\testone::welcome'
+    _title: 'Welcome to My Module in Drupal 8'
+  requirements: 
+    _permission: 'access content'
+
+

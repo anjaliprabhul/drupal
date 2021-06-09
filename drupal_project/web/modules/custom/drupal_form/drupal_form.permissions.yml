@@ -1,0 +1,4 @@
+static permission 1:
+  title: 'First level permission'
+  description: 'Form permission 1 .'
+

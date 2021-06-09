@@ -1,0 +1,7 @@
+drupal_form.Simpleform:
+  path: '/formnew'
+  defaults:
+    _form: '\Drupal\drupal_form\Form\SimpleForm'
+    _title: 'Welcome to My Module in Drupal 8'
+  requirements: 
+    _permission: 'static permission 1'

@@ -1,0 +1,21 @@
+new_module.hello:
+  path: '/hello'
+  defaults:
+    _form: '\Drupal\new_module\Form\SimpleForm'
+    _title: 'Welcome to My Module'
+  requirements: 
+    _permission: 'access content'
+# new_module.simple_form:
+#   path: '/custom-form'
+#   defaults:
+#     _controller: '\Drupal\new_module\Controller\Drupal::hello'
+#     _title: 'Welcome to My Module in Drupal 8'
+#   requirements: 
+#     _permission: 'access content'
+new_module.welcome:
+  path: '/welcomeone'
+  defaults:
+    _form: '\Drupal\new_module\Form\testone'
+    _title: 'Welcome to My Module'
+  requirements: 
+    _permission: 'access content'

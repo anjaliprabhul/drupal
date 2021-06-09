@@ -1,0 +1,8 @@
+static permission 1:
+  title: 'First level permission'
+  description: 'Form permission 1 .'
+
+static permission 2:
+  title: 'Second level permission'
+  description: 'Form permission 2 .'
+  restrict access: true
