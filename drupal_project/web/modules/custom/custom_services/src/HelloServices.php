@@ -80,33 +80,42 @@ class HelloServices {
     	$body = $response->getBody()->getContents();
     	return $body;
   	}
-  	public function UpdateIssuer($accessToken, array $updateissure, string $entityId) {
+  	public function badgrupdateissuer($accessToken, array $update_issure, string $entityId) {
     $response = $this->httpClient->request(
-          'put', 'https://api.badgr.io/v2/issuers/' . $entityId . '', [
+          'put', 'https://api.badgr.io/v2/issuers/' . $entityId, [
+            'form_params' => $update_issure,
+            'headers' => ['Authorization' => 'Bearer ' . $accessToken],
+          ]
+      )->getBody()->getContents();
+    return $response;
+  }
+
+    public function deleteissuer($accessToken, string $entityId) {
+    $response = $this->httpClient->request(
+          'delete', 'https://api.badgr.io/v2/issuers/' . $entityId,
+          [
 ​
-            'form_params' => $updateissure,
             'headers' => ['Authorization' => 'Bearer ' . $accessToken],
 ​
+          ],
+      )->getBody()->getContents();
+​
+    return $response;
+​
+  }
+  public function createissuerbadges($accessToken, array $create_badge, string $entityId) {
+    $response = $this->httpClient->request(
+          'post',
+          'https://api.badgr.io/v2/issuers/' . $entityId . '/badgeclasses',
+          [
+            'form_params' => $create_badge,
+            'headers' => ['Authorization' => 'Bearer ' . $accessToken],
           ]
       )->getBody()->getContents();
 ​
     return $response;
 ​
   }
-
-//   	public function DeleteIssuer($accessToken) 
-//   	{
-//     	$response = $this->httpClient->request(
-//           'delete', 'https://api.badgr.io/v2/issuers/eK3IZdhrTimAcTq2qI42rQ',
-//           [
-// ​
-//             'headers' => ['Authorization' => 'Bearer ' . $accessToken],
-// ​
-//           ],
-//       )->getBody()->getContents();
-//     return $response;
-//   }
-
 
  //  protected $say_something;
 

@@ -5,12 +5,3 @@ drupal_form.Simpleform:
     _title: 'Welcome to My Module in Drupal 8'
   requirements: 
     _permission: 'static permission 1'
-drupal_form.settings_form:
-  path: '/baggrform'
-  defaults:
-    _form: '\Drupal\drupal_form\Form\SimpleForm'
-    _title: 'SettingsForm'
-  requirements:
-    _permission: 'access administration pages'
-  options:
-    _admin_route: TRUE
